@@ -1,0 +1,22 @@
+name: POC Workflow Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      input1:
+        description: "Input 1"
+        required: true
+        default: "default input 1 value"
+      input2:
+        description: "Input 2"
+        required: true
+        default: "default input 2 value"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print input 1
+        run: echo "input1: ${{ github.event.inputs.input1 }}"
+      - name: print input 2
+        run: echo "input2: ${{ github.event.inputs.input2 }}"
