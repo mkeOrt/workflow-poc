@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print input 1
+        id: first-step
         run: echo "input1 ${{ inputs.input1 }}"
       - name: print input 2
+        run: steps.first-step.outcome
         run: echo "input2 ${{ inputs.input2 }}"
