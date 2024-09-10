@@ -20,6 +20,6 @@ jobs:
         id: first-step
         run: echo "input1 ${{ inputs.input1 }}"
       - name: print before step status
-        run: echo {{steps.first-step.outcome}}
+        run: echo ${{steps.first-step.outcome}}
       - name: print input 2
         run: echo "input2 ${{ inputs.input2 }}"
