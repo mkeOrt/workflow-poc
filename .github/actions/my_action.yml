@@ -1,0 +1,21 @@
+name: 'Action test'
+description: 'learning how to use outputs'
+
+inputs:
+  val:
+    description: 'input to be printed'
+    required: true
+
+outputs:
+  result:
+    description: 'it is the step result'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: say hello
+      run: echo "Hello my friend"
+    - name: print val
+      run: echo ${{inputs.val}}
+    - name: set return value
+      run: echo "result=Exitoso" >> $GITHUB_ENV
