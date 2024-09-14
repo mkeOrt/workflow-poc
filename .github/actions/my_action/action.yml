@@ -21,4 +21,4 @@ runs:
       run: echo ${{inputs.val}}
     - name: set return value
       shell: bash
-      run: echo "result=Exitoso" >> $GITHUB_OUTPUT
+      run: echo "result='Exitoso'" >> $GITHUB_OUTPUT
