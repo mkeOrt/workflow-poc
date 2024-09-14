@@ -25,7 +25,7 @@ jobs:
         run: echo "input2 ${{ inputs.input2 }}"
       - name: print using action
         id: mi_action
-        uses: mkeOrt/workflow-poc/.github/actions/my_action.yml
+        uses: ./.github/actions/my_action.yml
         with:
           val: "Mike"
       - name: Usar el output de la acción
