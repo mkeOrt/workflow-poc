@@ -14,8 +14,11 @@ runs:
   using: 'composite'
   steps:
     - name: say hello
+      shell: bash
       run: echo "Hello my friend"
     - name: print val
+      shell: bash
       run: echo ${{inputs.val}}
     - name: set return value
+      shell: bash
       run: echo "result=Exitoso" >> $GITHUB_ENV
