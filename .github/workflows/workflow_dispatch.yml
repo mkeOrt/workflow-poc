@@ -16,6 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
       - name: print input 1
         id: first-step
         run: echo "input1 ${{ inputs.input1 }}"
