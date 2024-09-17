@@ -26,9 +26,8 @@ jobs:
       - name: print input 2
         run: echo "input2 ${{ inputs.input2 }}"
       - name: print using action
-        id: mi_action
         uses: ./.github/actions/my_action
         with:
           val: "Mike"
       - name: Usar el output de la acción
-        run: echo "El resultado de la acción es ${{ steps.mi_action.outputs.result }}"
+        run: echo "El resultado de la acción es ${{ steps.my_action.outputs.RESULT }}"
