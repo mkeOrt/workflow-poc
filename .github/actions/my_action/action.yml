@@ -28,4 +28,6 @@ runs:
         echo "result=${{inputs.val}}" >> $GITHUB_OUTPUT
     - name: validate outputs
       shell: bash
-      run: echo ${{steps.my-action.outputs.result}}
+      run: |
+        echo "print from steps env"
+        echo ${{steps.my-action.outputs.result}}
