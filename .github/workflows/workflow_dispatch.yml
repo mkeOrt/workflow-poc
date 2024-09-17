@@ -29,9 +29,6 @@ jobs:
         uses: ./.github/actions/my_action
         with:
           val: "Mike"
-        env:
-          result: ${{ steps.my-action.outputs.result }}
-        run: echo "El resultado de la acción es $result"
       - name: Usar el output de la acción
         shell: bash
         env:
