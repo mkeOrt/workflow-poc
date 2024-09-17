@@ -9,7 +9,7 @@ inputs:
 outputs:
   result:
     description: 'it is the step result'
-    value: ${{ steps.my-action.outputs.result }}
+    value: ${{steps.my-action.outputs.result}}
 
 runs:
   using: 'composite'
