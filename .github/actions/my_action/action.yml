@@ -26,3 +26,6 @@ runs:
         echo SETTING VALUES TO OUTPUT
         echo "The result is: ${{inputs.val}}"
         echo "result=${{inputs.val}}" >> $GITHUB_OUTPUT
+    - name: validate outputs
+      shell: bash
+      run: echo ${{steps.my-action.outputs.result}}
