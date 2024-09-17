@@ -22,4 +22,4 @@ runs:
     - name: set return value
       id: my-action
       shell: bash
-      run: echo "RESULT=val" >> "$GITHUB_OUTPUT"
+      run: echo "RESULT=${{ inputs.val }}" >> "$GITHUB_OUTPUT"
