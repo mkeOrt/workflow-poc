@@ -21,7 +21,6 @@ runs:
       shell: bash
       run: echo ${{inputs.val}}
     - name: set return value
-      id: my-action
       shell: bash
       run: |
         echo SETTING VALUES TO OUTPUT
