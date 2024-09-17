@@ -21,13 +21,9 @@ runs:
       shell: bash
       run: echo ${{inputs.val}}
     - name: set return value
+      id: my-action
       shell: bash
       run: |
         echo SETTING VALUES TO OUTPUT
         echo "The result is: ${{inputs.val}}"
         echo "result=${{inputs.val}}" >> $GITHUB_OUTPUT
-    - name: validate outputs
-      shell: bash
-      run: |
-        echo "print from steps env"
-        echo ${{steps.my-action.outputs.result}}
