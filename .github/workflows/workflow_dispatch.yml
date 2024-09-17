@@ -30,4 +30,6 @@ jobs:
         with:
           val: "Mike"
       - name: Usar el output de la acción
-        run: echo "El resultado de la acción es ${{ steps.my_action.outputs.RESULT }}"
+        env:
+          RESULT: ${{ steps.my-action.outputs.RESULT }}
+        run: echo "El resultado de la acción es $RESULT"
