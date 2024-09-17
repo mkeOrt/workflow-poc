@@ -32,4 +32,4 @@ jobs:
       - name: Usar el output de la acción
         env:
           result: ${{ steps.my-action.outputs.result }}
-        run: echo "El resultado de la acción es ${{result}}"
+        run: echo "El resultado de la acción es $result"
