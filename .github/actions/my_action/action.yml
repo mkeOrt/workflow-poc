@@ -7,7 +7,7 @@ inputs:
     required: true
 
 outputs:
-  RESULT:
+  result:
     description: 'it is the step result'
 
 runs:
@@ -22,4 +22,4 @@ runs:
     - name: set return value
       id: my-action
       shell: bash
-      run: echo "RESULT=${{ inputs.val }}" >> "$GITHUB_OUTPUT"
+      run: echo "result=$(echo $inputs.val)" >> $GITHUB_OUTPUT
