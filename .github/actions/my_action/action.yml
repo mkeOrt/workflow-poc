@@ -26,7 +26,7 @@ runs:
       run: |
         echo SETTING VALUES TO OUTPUT
         echo "The result is: ${{inputs.val}}"
-        echo "result=${{inputs.val}}" >> $GITHUB_ENV
+        echo "result=${{inputs.val}}" >> $GITHUB_OUTPUT
     - name: validate outputs
       shell: bash
       run: |
