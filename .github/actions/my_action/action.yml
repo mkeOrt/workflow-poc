@@ -30,4 +30,4 @@ runs:
       shell: bash
       run: |
         echo "print from steps env"
-        echo ${{jobs.my-action.outputs.result}}
+        echo ${{steps.my-action.outputs.result}}
