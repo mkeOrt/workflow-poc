@@ -35,6 +35,10 @@ jobs:
         env:
           result: ${{ steps.actioner.outputs.result }}
         run: echo "El resultado de la acción es $result"
+      - name: Paso 1
+        env:
+          result: ${{ steps.actioner.outputs.result }}
+        run: echo "result=$result" >> $GITHUB_ENV
   
   confirm:
     runs-on: ubuntu-latest
@@ -44,6 +48,6 @@ jobs:
       - name: validate previous step
         shell: bash
         env:
-          result: ${{ steps.actioner.outputs.result }}
+          result: ${{ needs.build.outputs.result }}
         run: echo "El resultado de la acción es $result"
 
