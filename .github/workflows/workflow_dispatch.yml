@@ -41,7 +41,7 @@ jobs:
         id: set-job-result
         env:
           result: ${{ steps.actioner.outputs.result }}
-        run: echo "result=$result" >> $GITHUB_ENV
+        run: echo "result=$result" >> $GITHUB_OUTPUT
   
   confirm:
     runs-on: ubuntu-latest
