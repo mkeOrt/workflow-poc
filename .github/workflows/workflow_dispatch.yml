@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      result: ${{ steps.build.outputs.result }}
+      result: ${{ steps.set-job-result.outputs.result }}
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
@@ -37,7 +37,8 @@ jobs:
         env:
           result: ${{ steps.actioner.outputs.result }}
         run: echo "El resultado de la acción es $result"
-      - name: Paso 1
+      - name: set job result
+        id: set-job-result
         env:
           result: ${{ steps.actioner.outputs.result }}
         run: echo "result=$result" >> $GITHUB_ENV
