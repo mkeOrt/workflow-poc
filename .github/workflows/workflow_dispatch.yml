@@ -35,3 +35,13 @@ jobs:
         env:
           result: ${{ steps.actioner.outputs.result }}
         run: echo "El resultado de la acción es $result"
+  
+  confirm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: validate previous step
+        shell: bash
+        env:
+          result: ${{ steps.actioner.outputs.result }}
+        run: echo "El resultado de la acción es $result"
+
